@@ -51,6 +51,7 @@ nav a:hover {
 .essay-box {
     padding: 70px;
     max-width: 70%;
+    width: 100%;
     margin: auto;
     margin-top: 100px;
     font-size: 18px;
@@ -65,6 +66,7 @@ nav a:hover {
 .essay-box h2 {
     font-size: 30px;
     margin-bottom: 30px;
+    word-wrap: break-word;
 }
 
 .background1 {
@@ -110,7 +112,126 @@ nav a:hover {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
-    height: 450px;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        padding-right: 60px;
+    }
+
+    .logo {
+        padding-left: 60px;
+    }
+
+    nav h1 {
+        font-size: 26px;
+    }
+
+    nav a {
+        margin: 0 15px;
+        font-size: 15px;
+    }
+
+    .essay-box {
+        padding: 50px;
+        max-width: 80%;
+        font-size: 17px;
+    }
+
+    .essay-box h2 {
+        font-size: 26px;
+    }
+
+    .BestImg {
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    nav h1 {
+        font-size: 24px;
+        margin-left: 10px;
+        float: none;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .essay-box {
+        padding: 30px;
+        max-width: 90%;
+        margin-top: 80px;
+        font-size: 16px;
+    }
+
+    .essay-box h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .essay-box h3 {
+        font-size: 20px;
+    }
+
+    .BestImg {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav h1 {
+        font-size: 22px;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-left: 0;
+    }
+
+    nav a {
+        margin: 5px 6px;
+        font-size: 13px;
+    }
+
+    .essay-box {
+        padding: 20px;
+        max-width: 95%;
+        margin-top: 70px;
+        font-size: 15px;
+    }
+
+    .essay-box h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .essay-box h3 {
+        font-size: 18px;
+    }
+
+    .essay-box p {
+        font-size: 14px;
+    }
 }

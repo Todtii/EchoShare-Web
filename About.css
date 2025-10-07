@@ -59,7 +59,8 @@ body {
 }
 
 #kidmaiork {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 30px;
@@ -95,7 +96,8 @@ body {
     font-size: 18px;
     background-color: rgba(228, 252, 235, 0.7);
     border-radius: 12px;
-    width: 1000px;
+    max-width: 1000px;
+    width: 100%;
     margin: 20px auto;
 }
 
@@ -107,10 +109,9 @@ body {
 }
 
 .value-box {
-    width: 300px;
+    max-width: 300px;
     flex: 1;
     text-align: center;
-
 }
 
 .value-icon {

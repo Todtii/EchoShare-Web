@@ -58,8 +58,9 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     padding: 60px 80px;
-    background: linear-gradient(to bottom right, #e6f9ec, #d9f5e4); /* สีเขียวอ่อน */
-    height: 800px;
+    background: linear-gradient(to bottom right, #e6f9ec, #d9f5e4);
+    min-height: 800px;
+    height: auto;
 }
 
 .hero-content {
@@ -115,14 +116,16 @@ section {
 }
 
 #blog {
-    height: 70vh;
+    min-height: 70vh;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 30px;
 }
 
 #infographic {
-    height: 70vh;
+    min-height: 70vh;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 30px;
@@ -189,7 +192,8 @@ h3 {
 
 
 #video {
-    height: 70vh;
+    min-height: 70vh;
+    height: auto;
     width: 100%;
     margin: 0;
     padding: 30px;
@@ -363,6 +367,12 @@ h3 {
     #video {
         min-height: auto;
         padding: 30px 15px;
+        height: auto;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 14px;
     }
 }
 
@@ -436,12 +446,21 @@ h3 {
     #infographic,
     #video {
         padding: 20px 10px;
+        height: auto;
     }
 
     footer {
         padding: 1.5rem 1rem;
         font-size: 14px;
     }
+}
+
+footer {
+    background-color: rgb(0, 151, 68);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 60px;
 }
 
 @media screen and (max-width: 1024px) {
