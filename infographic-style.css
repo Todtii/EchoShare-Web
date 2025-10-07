@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: #2e4d2e;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
 }
 
 nav {
@@ -30,7 +38,7 @@ nav a {
     font-weight: bold;
 }
 
-nav h1{
+nav h1 {
     color: #181a18;
     float: left;
     font-size: 30px;
@@ -43,82 +51,109 @@ nav a:hover {
     margin: 0 15px;
 }
 
-.title {
-    text-emphasis: center;
-    margin-top: 70px;
-    font-size: 40px;
+.infographic-page {
+    padding-top: 100px;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-body {
-    background-color: white;
-    color: #2e4d2e;
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    text-align: center;
-    justify-content: center;
-}
-
-#kidmaiork {
-    height: 100vh;
+.back-button {
     width: 100%;
-    margin: 0;
-    padding: 30px;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-bottom: 20px;
 }
 
-.container {
+.back-button a {
+    color: #2e4d2e;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.back-button a:hover {
+    background-color: rgba(180, 255, 182, 0.5);
+    color: #28c35c;
+}
+
+.page-title {
+    font-size: 42px;
+    color: #2f6f4f;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.infographic-container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 50px;
+    margin-bottom: 40px;
 }
 
-.container img {
-    width: 300px;
+.infographic-image {
+    width: 100%;
+    background-color: #f8fff9;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infographic-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 128, 0, 0.15);
+}
+
+.infographic-image img {
+    width: 100%;
     height: auto;
-    object-fit: cover;
+    display: block;
+    border-radius: 10px;
 }
 
-.box {
-    text-align: left;
-    width: 550px;
-    font-size: 1rem;
-    margin-top: 50px;
-    margin-bottom: 30px;
+.description-box {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    background-color: rgba(228, 252, 235, 0.7);
+    border-radius: 12px;
+    margin: 0 20px 50px 20px;
+    text-align: center;
 }
 
-.box p {
+.description-box h3 {
+    color: #2f6f4f;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.description-box p {
+    color: #4a6e4a;
+    font-size: 16px;
     line-height: 1.6;
 }
 
-.value {
-    padding: 30px;
-    font-size: 18px;
-    background-color: rgba(228, 252, 235, 0.7);
-    border-radius: 12px;
-    width: 1000px;
-    margin: 20px auto;
-}
-
-.value-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 100px;
-    margin-top: 20px;
-}
-
-.value-box {
-    width: 300px;
-    flex: 1;
+footer {
+    background-color: rgb(0, 151, 68);
+    color: white;
     text-align: center;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    height: 100px;
+    width: 100%;
+    margin-top: auto;
 }
 
-.value-icon {
-    width: 250px;
-    height: auto;
-   
-}
-
+/* Responsive Design */
 @media screen and (max-width: 1024px) {
     nav {
         padding-right: 100px;
@@ -192,17 +227,4 @@ body {
     .infographic-image {
         padding: 15px;
     }
-} 
-
-footer {
-    background-color: rgb(0, 151, 68);
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    height: 50px;
-    width: 100%;
-    margin-top: auto;
 }

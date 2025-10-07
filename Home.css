@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -212,6 +214,258 @@ h3 {
     border-radius: 8px; /* มุมโค้งสวย ๆ */
 }
 
+@media screen and (max-width: 1024px) {
+    nav {
+        padding-right: 100px;
+    }
+    
+    .logo {
+        padding-left: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding-right: 20px;
+    }
+    
+    .logo {
+        padding-left: 20px;
+    }
+    
+    nav h1 {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+    
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    
+    .page-title {
+        font-size: 32px;
+        padding: 0 20px;
+    }
+    
+    .infographic-container {
+        padding: 0 15px;
+    }
+    
+    .infographic-image {
+        padding: 20px;
+    }
+    
+    .description-box {
+        padding: 20px;
+        margin: 0 15px 40px 15px;
+    }
+    
+    .description-box h3 {
+        font-size: 20px;
+    }
+    
+    .description-box p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav h1 {
+        font-size: 20px;
+    }
+    
+    nav a {
+        margin: 0 5px;
+        font-size: 12px;
+    }
+    
+    .page-title {
+        font-size: 26px;
+    }
+    
+    .infographic-image {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 13px 20px;
+    }
+
+    nav h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 100px 40px 40px;
+        min-height: 500px;
+    }
+
+    .hero-content {
+        max-width: 500px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-icon {
+        font-size: 150px;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-top: 80px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    nav h1 {
+        font-size: 22px;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 120px 20px 40px;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-icon {
+        font-size: 100px;
+        margin: 30px 0 0 0;
+    }
+
+    .eco-tip-content p {
+        font-size: 16px;
+    }
+
+    .eco-tip-content strong {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-top: 60px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 220px;
+    }
+
+    #blog,
+    #infographic,
+    #video {
+        min-height: auto;
+        padding: 20px 10px;
+    }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+    nav h1 {
+        font-size: 20px;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin: 5px 8px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .hero-icon {
+        font-size: 80px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .eco-tip-content p {
+        font-size: 14px;
+    }
+
+    .eco-tip-content strong {
+        font-size: 18px;
+    }
+
+    .card {
+        width: 95%;
+    }
+
+    .video-container iframe {
+        height: 200px;
+    }
 
 footer {
     background-color: rgb(0, 151, 68);
