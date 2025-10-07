@@ -1,0 +1,643 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: #2e4d2e;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(180, 255, 182, 0.95);
+    padding: 13px 200px 13px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+}
+
+nav h1 {
+    color: #181a18;
+    font-size: 30px;
+    margin: 0;
+    padding-left: 100px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: #2e4d2e;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #5cbd2f;
+    background-color: rgba(92, 189, 47, 0.1);
+}
+
+
+/* Parallax Section */
+
+.parallax-section {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(135deg, #e6f9ec 0%, #b4ffb6 50%, #d9f5e4 100%);
+    z-index: 1;
+    will-change: transform;
+}
+
+.parallax-bg::before {
+    content: '🌿';
+    position: absolute;
+    font-size: 200px;
+    opacity: 0.1;
+    top: 20%;
+    left: 10%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.parallax-bg::after {
+    content: '🌱';
+    position: absolute;
+    font-size: 150px;
+    opacity: 0.1;
+    bottom: 20%;
+    right: 15%;
+    animation: float 8s ease-in-out infinite 1s;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: #2e4d2e;
+    margin-top: 80px;
+    padding: 0 20px;
+}
+
+.parallax-content h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+    animation: fadeInDown 1s ease;
+}
+
+.parallax-content p {
+    font-size: 22px;
+    color: #4a6e4a;
+    animation: fadeInUp 1s ease 0.3s both;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Main Content */
+
+.contact-main {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+.team-section {
+    max-width: 1400px;
+    margin: 0 auto 80px;
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 42px;
+    color: #2f6f4f;
+    margin-bottom: 60px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 128, 0, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 128, 0, 0.2);
+}
+
+.card-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #e6f9ec, #d9f5e4);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .card-image img {
+    transform: scale(1.1);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(46, 77, 46, 0.7));
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.team-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.leaf-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    animation: rotate 3s ease-in-out infinite;
+}
+
+@keyframes rotate {
+    0%,
+    100% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+}
+
+.card-info {
+    padding: 25px;
+    text-align: center;
+    background: linear-gradient(to bottom, white, #f8fff9);
+}
+
+.card-info h3 {
+    font-size: 24px;
+    color: #2f6f4f;
+    margin-bottom: 10px;
+}
+
+.card-info .role {
+    font-size: 16px;
+    color: #28c35c;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.card-info .student-id {
+    font-size: 14px;
+    color: #4a6e4a;
+    background-color: rgba(180, 255, 182, 0.3);
+    padding: 8px 15px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* Social Links Styling */
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.team-card:hover .social-links {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #28c35c, #5cbd2f);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(40, 195, 92, 0.3);
+}
+
+.contact-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(40, 195, 92, 0.5);
+    background: linear-gradient(135deg, #5cbd2f, #28c35c);
+}
+
+.contact-link .icon {
+    font-size: 16px;
+}
+
+.contact-link .text {
+    font-size: 13px;
+}
+
+
+/* Contact Info Section */
+
+.contact-info {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contact-box {
+    background: linear-gradient(135deg, rgba(228, 252, 235, 0.8), rgba(180, 255, 182, 0.3));
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 128, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 128, 0, 0.15);
+}
+
+.contact-box h2 {
+    font-size: 36px;
+    color: #2f6f4f;
+    margin-bottom: 15px;
+}
+
+.contact-box>p {
+    font-size: 18px;
+    color: #4a6e4a;
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    font-size: 18px;
+    color: #2e4d2e;
+    margin: 15px 0;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-details p:hover {
+    color: #28c35c;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: rgb(0, 151, 68);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    min-height: 100px;
+    margin-top: 60px;
+}
+
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+
+/* Large Tablets & Small Desktops (1024px) */
+
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 13px 60px 13px 20px;
+    }
+    nav h1 {
+        font-size: 26px;
+        padding-left: 40px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    nav a {
+        font-size: 15px;
+        padding: 6px 10px;
+    }
+    .parallax-section {
+        min-height: 400px;
+    }
+    .parallax-content h1 {
+        font-size: 44px;
+    }
+    .parallax-content p {
+        font-size: 20px;
+    }
+    .parallax-bg::before {
+        font-size: 150px;
+    }
+    .parallax-bg::after {
+        font-size: 100px;
+    }
+    .team-section h2 {
+        font-size: 36px;
+    }
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+    .card-image {
+        height: 300px;
+    }
+    .contact-box {
+        padding: 40px 30px;
+    }
+    .contact-box h2 {
+        font-size: 32px;
+    }
+}
+
+
+/* Tablets & iPad (768px) */
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 13px 20px;
+    }
+    nav h1 {
+        font-size: 24px;
+        padding-left: 0;
+    }
+    .nav-links {
+        gap: 10px;
+    }
+    nav a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+    .parallax-section {
+        min-height: 350px;
+    }
+    .parallax-content {
+        margin-top: 60px;
+    }
+    .parallax-content h1 {
+        font-size: 36px;
+    }
+    .parallax-content p {
+        font-size: 18px;
+    }
+    .parallax-bg::before {
+        font-size: 120px;
+        left: 5%;
+    }
+    .parallax-bg::after {
+        font-size: 80px;
+        right: 5%;
+    }
+    .contact-main {
+        padding: 40px 15px;
+    }
+    .team-section {
+        margin-bottom: 60px;
+    }
+    .team-section h2 {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 0 15px;
+    }
+    .card-image {
+        height: 280px;
+    }
+    .card-info {
+        padding: 20px;
+    }
+    .card-info h3 {
+        font-size: 22px;
+    }
+    .card-info .role {
+        font-size: 15px;
+    }
+    .contact-box {
+        padding: 35px 25px;
+    }
+    .contact-box h2 {
+        font-size: 28px;
+    }
+    .contact-box>p {
+        font-size: 16px;
+    }
+    .contact-details p {
+        font-size: 16px;
+    }
+    .contact-link {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    .contact-link .icon {
+        font-size: 14px;
+    }
+    .contact-link .text {
+        font-size: 11px;
+    }
+}
+
+
+/* Mobile (480px) */
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    nav h1 {
+        font-size: 22px;
+        padding: 0;
+    }
+    .nav-links {
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav a {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+    .parallax-section {
+        min-height: 300px;
+    }
+    .parallax-content {
+        margin-top: 80px;
+    }
+    .parallax-content h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    .parallax-content p {
+        font-size: 16px;
+    }
+    /* ปิด parallax effect บน mobile */
+    .parallax-bg {
+        transform: none !important;
+    }
+    .parallax-bg::before {
+        font-size: 80px;
+    }
+    .parallax-bg::after {
+        font-size: 60px;
+    }
+    .contact-main {
+        padding: 30px 10px;
+    }
+    .team-section h2 {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    .team-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .card-image {
+        height: 250px;
+    }
+    .card-info {
+        padding: 20px 15px;
+    }
+    .card-info h3 {
+        font-size: 20px;
+    }
+    .card-info .role {
+        font-size: 14px;
+    }
+    .card-info .student-id {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+    .leaf-icon {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    /* แสดง social links ตลอดเวลาบนมือถือ */
+    .social-links {
+        opacity: 1;
+        transform: translateY(0);
+        flex-direction: row;
+    }
+    .contact-link {
+        flex: 1;
+        justify-content: center;
+        padding: 8px 12px;
+    }
+    .contact-box {
+        padding: 25px 20px;
+        border-radius: 15px;
+    }
+    .contact-box h2 {
+        font-size: 24px;
+    }
+    .contact-box>p {
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .contact-details p {
+        font-size: 15px;
+        margin: 12px 0;
+    }
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 14px;
+    }
+}

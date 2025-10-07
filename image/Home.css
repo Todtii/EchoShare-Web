@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: #2e4d2e;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(180, 255, 182, 0.7);
+    padding: 13px;
+    box-sizing: border-box;
+    text-align: right;
+    z-index: 9999;
+    padding-right: 200px;
+}
+
+.logo {
+    padding-left: 120px;
+}
+
+nav a {
+    margin: 0 20px;
+    color: #2e4d2e;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 9px;
+    font-weight: bold;
+}
+
+nav h1{
+    color: #181a18;
+    float: left;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: #5cbd2f;
+    padding: 3px 5px;
+    margin: 0 15px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 80px;
+    background: linear-gradient(to bottom right, #e6f9ec, #d9f5e4); /* สีเขียวอ่อน */
+    height: 800px;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin-left: 200px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    color: #1c1c1c;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.green-text {
+    color: #28c35c; /* สีเขียวสด */
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.hero-icon {
+    font-size: 200px;
+    color: #28c35c;
+    opacity: 0.3;
+    margin-right: 570px;
+}
+
+.eco-tip {
+    background-color: #28c35c;
+    color: white;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    height: 200px;        
+    text-align: center;
+}
+
+.eco-tip-content p {
+    margin: 8px 0;
+    font-size: 19px;
+}
+
+.eco-tip-content strong {
+    font-size: 25px;
+}
+
+section {
+    align-items: center;
+}
+
+#blog {
+    height: 70vh;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+}
+
+#infographic {
+    height: 70vh;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+}
+
+h2 {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2f6f4f;
+    font-size: 30px;
+}
+
+h3 {
+    text-align: center;
+    color: #2e4d2e;
+    margin-bottom: 35px;
+    font-size: 25px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 300px;
+    background-color: #ffffff;
+    border: 1px solid #cde9cd;
+    border-radius: 10px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #2e4d2e;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 128, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    margin: 0 0 10px 0;
+    color: #2f6f4f;
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #4a6e4a;
+}
+
+
+#video {
+    height: 70vh;
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;        /* ระยะห่างระหว่างวิดีโอ */
+    flex-wrap: wrap;  /* ถ้าหน้าจอเล็กให้วิดีโอขึ้นบรรทัดใหม่อัตโนมัติ */
+}
+
+.video-container iframe {
+    width: 420px;
+    height: 250px;
+    border-radius: 8px; /* มุมโค้งสวย ๆ */
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 13px 60px 13px 20px;
+    }
+
+    .logo {
+        padding-left: 20px;
+    }
+
+    nav h1 {
+        font-size: 26px;
+    }
+
+    nav a {
+        margin: 0 15px;
+        font-size: 15px;
+    }
+
+    .hero {
+        padding: 120px 60px 60px;
+        min-height: 600px;
+    }
+
+    .hero-content {
+        max-width: 500px;
+        margin-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-icon {
+        font-size: 150px;
+        margin-right: 0;
+    }
+
+    h2 {
+        font-size: 28px;
+        margin-top: 80px;
+    }
+
+    h3 {
+        font-size: 23px;
+    }
+
+    .card {
+        width: 280px;
+    }
+
+    .video-container iframe {
+        width: 380px;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 13px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        padding-left: 0;
+    }
+
+    nav h1 {
+        font-size: 24px;
+        margin-left: 0;
+        float: none;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 100px 40px 40px;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-icon {
+        font-size: 120px;
+        margin: 30px 0 0 0;
+    }
+
+    .eco-tip {
+        min-height: 150px;
+        padding: 20px 15px;
+    }
+
+    .eco-tip-content p {
+        font-size: 16px;
+    }
+
+    .eco-tip-content strong {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-top: 60px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .card-container {
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .video-container {
+        gap: 15px;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        max-width: 450px;
+        height: 250px;
+    }
+
+    #blog,
+    #infographic,
+    #video {
+        min-height: auto;
+        padding: 30px 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 10px 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav h1 {
+        font-size: 22px;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 5px 6px;
+    }
+
+    .hero {
+        padding: 90px 20px 30px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-icon {
+        font-size: 100px;
+    }
+
+    .eco-tip {
+        padding: 20px 10px;
+    }
+
+    .eco-tip-content p {
+        font-size: 15px;
+    }
+
+    .eco-tip-content strong {
+        font-size: 19px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-top: 50px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 200px;
+    }
+
+    #blog,
+    #infographic,
+    #video {
+        padding: 20px 10px;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 13px 20px;
+    }
+
+    nav h1 {
+        font-size: 24px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 100px 40px 40px;
+        min-height: 500px;
+    }
+
+    .hero-content {
+        max-width: 500px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-icon {
+        font-size: 150px;
+    }
+
+    h2 {
+        font-size: 26px;
+        margin-top: 80px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+}
+
